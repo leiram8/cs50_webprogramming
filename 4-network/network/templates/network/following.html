@@ -1,0 +1,13 @@
+{% extends "network/layout.html" %}
+
+{% block body %}
+    {% if user.is_authenticated %}
+
+        {% if message %}
+            {{ message }}
+        {% endif %}
+
+        {% include "network/posts.html" %}
+
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,24 @@
+textarea {
+    min-height: 400px;
+}
+
+.mail {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.sender {
+    font-weight: bold;
+}
+
+.subject {
+    padding-left: 15px;
+}
+
+.date {
+    float: right;
+}
+
+.read {
+    background-color: gray;
+}

@@ -1,0 +1,28 @@
+.profile, .post {
+    border: 1px solid gray;
+    border-radius: 4px;
+    margin: 10px 0 10px 0;
+    padding: 10px;
+}
+
+.body {
+    padding: 0 15px 0 15px;
+}
+
+.text {
+    font-weight: 600;
+}
+
+.date {
+    font-weight: lighter;
+}
+
+.fa-heart {
+    color: red;
+    margin-bottom: 10px;
+}
+
+textarea {
+    margin-bottom: 10px;
+}
+

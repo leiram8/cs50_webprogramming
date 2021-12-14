@@ -1,0 +1,33 @@
+{% extends "network/layout.html" %}
+
+{% block body %}
+    <div class="profile">
+        <h2>{{ username }}</h2>
+        
+        <p>Following: {{ following }}</p>
+        <p>Followers: {{ followers }}</p>
+    
+        {% if user.is_authenticated %}
+            {% if user.username != username %}
+                {% if follows %}
+
+                    <form action="{% url 'profile' username %}" method="POST">
+                        {% csrf_token %}
+                        <button class="btn btn-sm btn-outline-primary" name="unfollow">Unfollow</button>
+                    </form>
+                
+                {% else %}
+
+                    <form action="{% url 'profile' username %}" method="POST">
+                        {% csrf_token %}
+                        <button class="btn btn-sm btn-outline-primary" name="follow">Follow</button>
+                    </form>
+                
+                {% endif %}
+            {% endif %}
+        {% endif %}
+    </div>
+
+    {% include "network/posts.html" %}
+    
+{% endblock %}
